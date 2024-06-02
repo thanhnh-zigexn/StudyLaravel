@@ -12,13 +12,13 @@ $c[] = $item;
 					
 function printArray($array) {					
 	foreach($array as $item) {				
-	echo $item;				
+	echo $item;	 			
 }					
 }					
 					
 foreach($c as $c_item) {					
 	printArray($c_item);				
-echo "<br/>";					
+echo          "<br/>";					
 					
 }					
 					
