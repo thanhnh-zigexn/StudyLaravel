@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Auth\LoginController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -10,7 +11,10 @@ Route::get('/', function () {
 
 // Route::get('/tasks', [TaskController::class, 'index']);
 // Route::get('/users', UserController::class, 'index');
-Route::resource('users', UserController::class);
+Route::resource('users', UserController::class)->middleware(['auth']);
+
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
 
 
 Route::get('BT1', function () {

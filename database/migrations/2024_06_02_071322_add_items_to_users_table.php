@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->integer('age');
-            $table->string('gender');
+            $table->boolean('gender');
+            $table->string('confirm_password')->nullable();
         });
     }
 
