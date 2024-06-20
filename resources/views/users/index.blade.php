@@ -17,4 +17,7 @@
             </li>
         @endforeach
     </ul>
-{{ $users->links() }} <!-- Hiển thị các liên kết phân trang
+{{ $users->links('vendor.pagination.custom') }}
+
+
+
